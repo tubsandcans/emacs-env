@@ -41,12 +41,12 @@
          user-emacs-directory)
         ((boundp 'user-init-directory)
          user-init-directory)
-        (t "~/.emacs.d/")))
+        (t "~/.emacs.d/user_config/")))
 
 (defun load-user-file (file)
   (interactive "f")
   "Load a file in current user's configuration directory"
-  (load-file (expand-file-name file user-init-dir)))
+  (load-file (expand-file-name file "~/.emacs.d/user_config/")))
 
 (load-user-file "projectile_config.el")
 (load-user-file "ruby_config.el")
