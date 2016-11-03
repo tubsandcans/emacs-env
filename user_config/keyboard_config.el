@@ -10,4 +10,6 @@
 (global-set-key (kbd "s-}") 'tabbar-forward-tab)
 (global-set-key (kbd "s-z") 'undo)
 (global-set-key [(shift super z)] 'redo)
+(global-set-key [(super up)] 'tabbar-backward-group)
+(global-set-key [(super down)] 'tabbar-forward-group)
 ;;; keyboard_config.el ends here

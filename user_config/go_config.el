@@ -6,4 +6,5 @@
   (setq tab-width 4 indent-tabs-mode 1)
   (push 'company-go company-backends))
 (add-hook 'go-mode-hook 'my-go-mode-hook)
+(exec-path-from-shell-copy-env "GOPATH")
 ;;; go_config.el ends here

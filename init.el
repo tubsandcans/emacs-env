@@ -60,7 +60,7 @@
 (load-user-file "global_config.el")
 (load-user-file "magit_config.el")
 
-(load-user-file "sass-mode.el") ;; this isn't a user-file w/e
+(load-user-file "sass-mode.el") ;; this isn't a user-made file w/e
 
 (provide 'init)
 ;;; init.el ends here
