@@ -17,14 +17,14 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(blink-cursor-mode nil)
- '(coffee-tab-width 2)
  '(column-number-mode t)
+ '(coffee-tab-width 2)
  '(inhibit-startup-screen t)
  '(initial-buffer-choice nil)
  '(ns-pop-up-frames t)
  '(package-selected-packages
    (quote
-    (exec-path-from-shell ruby-tools flymake-easy flymake-ruby flycheck go-mode makey discover fullscreen-mode fullframe undo-tree coffee-mode rainbow-mode color-theme-railscasts color-theme magit rvm ## robe flx-ido)))
+    (flycheck json-snatcher json-reformat js2-mode json-mode web-mode helm-git-grep exec-path-from-shell ruby-tools go-mode makey discover fullscreen-mode fullframe undo-tree coffee-mode rainbow-mode color-theme-railscasts color-theme magit rvm ## robe flx-ido)))
  '(show-paren-mode t)
  '(tabbar-separator (quote (0.5)))
  '(tool-bar-mode nil)
@@ -48,6 +48,7 @@
   "Load a file in current user's configuration directory"
   (load-file (expand-file-name file "~/.emacs.d/user_config/")))
 
+(load-user-file "global_config.el")
 (load-user-file "projectile_config.el")
 (load-user-file "ruby_config.el")
 (load-user-file "helm_config.el")
@@ -57,10 +58,14 @@
 (load-user-file "ido_config.el")
 (load-user-file "keyboard_config.el")
 (load-user-file "window_config.el")
-(load-user-file "global_config.el")
 (load-user-file "magit_config.el")
+(load-user-file "helm_git_grep_config.el")
+(load-user-file "flycheck_config.el")
+(load-user-file "web_mode_config.el")
 
 (load-user-file "sass-mode.el") ;; this isn't a user-made file w/e
+
+(add-to-list 'auto-mode-alist '("\\.god$" . ruby-mode))
 
 (provide 'init)
 ;;; init.el ends here
