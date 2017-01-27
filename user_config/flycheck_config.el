@@ -5,8 +5,7 @@
 (add-hook 'after-init-hook #'global-flycheck-mode)
 ;; disable jshint since we prefer eslint checking
 (setq-default flycheck-disabled-checkers
-	      '(json-jsonlist)
-	      '(javascript-jshint))
+	      '(javascript-jshint json-jsonlist))
 
 ;; use eslint with web-mode for jsx files
 (with-eval-after-load 'flycheck
