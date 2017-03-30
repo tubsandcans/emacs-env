@@ -17,7 +17,11 @@
   ;;; http://web-mode.org/
   (setq web-mode-markup-indent-offset 2)
   (setq web-mode-css-indent-offset 2)
-  (setq web-mode-code-indent-offset 2))
+  (setq web-mode-code-indent-offset 2)
+  ;; short circuit js mode and just do everything in jsx-mode
+  (if (equal web-mode-content-type "javascript")
+      (web-mode-set-content-type "jsx")
+    (message "now set to: %s" web-mode-content-type)))
 (add-hook 'web-mode-hook  'my-web-mode-hook)
 
 ;; for better jsx syntax-highlighting in web-mode
