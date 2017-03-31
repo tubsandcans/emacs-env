@@ -2,14 +2,55 @@
 ;;; Commentary:
 
 ;;; Code:
-(package-initialize)
-(add-to-list 'load-path "~/emacs_env/")
-
+(add-to-list 'load-path "~/emacs-env/")
+(require 'package)
 (add-to-list 'package-archives
     '("marmalade" .
       "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives
     '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
+(setq package-selected-packages
+      '(
+	flycheck
+	json-snatcher
+	json-reformat
+	js2-mode
+	json-mode
+	web-mode
+	helm-git-grep
+	exec-path-from-shell
+	ruby-tools
+	go-mode
+	makey
+	discover
+	fullscreen-mode
+	fullframe
+	undo-tree
+	haml-mode
+	rainbow-mode
+	color-theme-railscasts
+	color-theme
+	magit
+	company
+	projectile
+	helm
+	helm-projectile
+	rvm
+	robe
+	flx-ido
+	))
+
+(defun install-packages ()
+  "Install all required packages."
+  (interactive)
+  (unless package-archive-contents
+    (package-refresh-contrents))
+  (dolist (package package-selected-packages)
+    (unless (package-installed-p package)
+      (package-install package))))
+
+(install-packages)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -18,13 +59,10 @@
  ;; If there is more than one, they won't work right.
  '(blink-cursor-mode nil)
  '(column-number-mode t)
- '(coffee-tab-width 2)
  '(inhibit-startup-screen t)
  '(initial-buffer-choice nil)
  '(ns-pop-up-frames t)
- '(package-selected-packages
-   (quote
-    (flycheck json-snatcher json-reformat js2-mode json-mode web-mode helm-git-grep exec-path-from-shell ruby-tools go-mode makey discover fullscreen-mode fullframe undo-tree coffee-mode rainbow-mode color-theme-railscasts color-theme magit rvm ## robe flx-ido)))
+
  '(show-paren-mode t)
  '(tabbar-separator (quote (0.5)))
  '(tool-bar-mode nil)
