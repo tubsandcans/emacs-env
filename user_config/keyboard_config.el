@@ -13,3 +13,4 @@
 (global-set-key [(super up)] 'tabbar-backward-group)
 (global-set-key [(super down)] 'tabbar-forward-group)
 ;;; keyboard_config.el ends here
+
