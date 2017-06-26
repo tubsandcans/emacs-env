@@ -1,7 +1,7 @@
 ;;; package: keyboard config for init.el
 ;;; Commentary:
 ;;; Code:
-(global-set-key [f3] 'shell)
+(global-set-key [f3] 'ansi-term)
 (global-set-key [f4] 'goto-line)
 (global-set-key [f5] 'query-replace)
 (global-set-key [f6] 'linum-mode)
