@@ -9,33 +9,33 @@
 ;; Tabbar settings
 (set-face-attribute
  'tabbar-default nil
- :background "gray20"
- :foreground "gray20"
+ :background "#eee8d5"
+ :foreground "#eee8d5"
  :family "Lucida Grande"
  :height 1
- :box '(:line-width 1 :color "gray20" :style nil))
+ :box '(:line-width 1 :color "#eee8d5" :style nil))
 (set-face-attribute
  'tabbar-unselected nil
- :background "gray30"
- :foreground "white"
- :box '(:line-width 5 :color "gray30" :style nil))
+ :background "gray60"
+ :foreground "#fdf6e3"
+ :box '(:line-width 5 :color "gray60" :style nil))
 (set-face-attribute
  'tabbar-selected nil
- :background "gray75"
- :foreground "black"
- :box '(:line-width 5 :color "gray75" :style nil))
+ :background "#586e75"
+ :foreground "#fdf6e3"
+ :box '(:line-width 5 :color "#586e75" :style nil))
 (set-face-attribute
  'tabbar-highlight nil
- :background "white"
- :foreground "black"
+ :background "gray20"
+ :foreground "#eee8d5"
  :underline nil
- :box '(:line-width 5 :color "white" :style nil))
+ :box '(:line-width 5 :color "gray20" :style nil))
 (set-face-attribute
  'tabbar-button nil
- :box '(:line-width 1 :color "gray20" :style nil))
+ :box '(:line-width 1 :color "#eee8d5" :style nil))
 (set-face-attribute
  'tabbar-separator nil
- :background "gray20"
+ :background "#eee8d5"
  :height 0.6)
 
 ;; Change padding of the tabs

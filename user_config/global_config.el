@@ -7,5 +7,5 @@
 (cua-selection-mode t)
 (show-paren-mode 1)
 (column-number-mode 1)
-
+(set-frame-font "Menlo 12")
 ;;; global_config.el ends here

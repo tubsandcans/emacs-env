@@ -7,9 +7,10 @@
 ;;;(load-theme 'zenburn t)
 ;;;(load-theme 'suscolors t)
 ;;;(load-theme 'misterioso t)
-(load-theme 'solarized-dark t)
-(set-frame-font "Menlo 14")
-(set-cursor-color "#c1cdc1")
+(load-theme 'solarized-light t)
+;;;(load-theme 'dichromacy t)
+;;;(set-cursor-color "#c1cdc1")
+(set-cursor-color "gray30")
 (add-hook 'css-mode-hook 'rainbow-mode)
 (add-hook 'sass-mode-hook 'rainbow-mode)
 
